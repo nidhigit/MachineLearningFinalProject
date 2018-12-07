@@ -15,7 +15,7 @@ public class Perceptron_stnd {
  		String CVsplitSeq[]= {"00","01","02","03","04"};
  		
   		//run for all five combinations of cross validation slipts
- 		for(int crossValidationIndex=0;crossValidationIndex<5;crossValidationIndex++)
+ 	for(int crossValidationIndex=0;crossValidationIndex<5;crossValidationIndex++)
  		{
  			Data data[]=new Data[6000];
  	 		 
@@ -23,13 +23,13 @@ public class Perceptron_stnd {
   	 		
  	 		int index=-1;
 
- 			String testFileName = "C:\\Machine Learning\\hw2\\Perceptron\\dataset\\CVSplits\\" + "training" + CVsplitSeq[crossValidationIndex] + ".data";
+ 			String testFileName = "C:\\Machine Learning\\all\\movie-ratings.tar\\movie-ratings\\movie-ratings\\data-splits\\" + "training" + CVsplitSeq[crossValidationIndex] + ".data";
  			for(int fileIndex=0;fileIndex<5;fileIndex++)
  			{
  				//club all other 4 files into one -
  				if(fileIndex!=crossValidationIndex)
  				{
- 				File file = new File("C:\\Machine Learning\\hw2\\Perceptron\\dataset\\CVSplits\\" + "training" + CVsplitSeq[fileIndex] + ".data");
+ 				File file = new File("C:\\\\Machine Learning\\\\all\\\\movie-ratings.tar\\\\movie-ratings\\\\movie-ratings\\\\data-splits\\\\" + "training" + CVsplitSeq[fileIndex] + ".data");
  				try {
  					FileInputStream fis = new FileInputStream(file);
  					BufferedReader df    = new BufferedReader(new InputStreamReader(fis));
